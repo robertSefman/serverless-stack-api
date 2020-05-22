@@ -3,11 +3,11 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  parser: 'babel-eslint',
-  extends: ['airbnb', 'prettier', 'prettier/react'],
+  parser: "babel-eslint",
+  extends: ["airbnb", "prettier", "prettier/react"],
   globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
   },
   parserOptions: {
     ecmaFeatures: {
@@ -15,21 +15,27 @@ module.exports = {
       modules: true,
     },
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: "module",
   },
-  plugins: ['react', 'prettier'],
+  plugins: ["react", "prettier"],
   rules: {
-    "prettier/prettier": ["error", {
-     "endOfLine":"auto"
-   }],
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    'react/forbid-prop-types': [0, { forbid: ['any'] }],
-    'react/prop-types': 0,
-    "semi": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
+    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+    "react/forbid-prop-types": [0, { forbid: ["any"] }],
+    "react/prop-types": 0,
+    semi: 0,
+    "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
+    "import/prefer-default-export": 0,
+    "no-unused-vars": 0,
   },
   env: {
     jest: true,
     browser: true,
     node: true,
   },
-};
+}
