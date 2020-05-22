@@ -1,5 +1,5 @@
-import handler from "./libs/handler-lib";
-import dynamoDb from "./libs/dynamodb-lib";
+import handler from "./libs/handler-lib"
+import dynamoDb from "./libs/dynamodb-lib"
 
 export const main = handler(async (event, context) => {
   const params = {
@@ -9,11 +9,11 @@ export const main = handler(async (event, context) => {
     // - 'noteId': path parameter
     Key: {
       userId: event.requestContext.identity.cognitoIdentityId,
-      noteId: event.pathParameters.id
-    }
-  };
+      noteId: event.pathParameters.id,
+    },
+  }
 
-  await dynamoDb.delete(params);
+  await dynamoDb.delete(params)
 
-  return { status: true };
-});
+  return { status: true }
+})

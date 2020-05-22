@@ -32,6 +32,7 @@ module.exports = {
     "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
     "import/prefer-default-export": 0,
     "no-unused-vars": 0,
+    "no-nested-ternary": 0,
   },
   env: {
     jest: true,
